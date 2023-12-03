@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Finalist {
 
-    static void acceptCookies(WebDriver driver) throws InterruptedException {
+    public static void acceptCookies(WebDriver driver) throws InterruptedException {
         Thread.sleep(2000);
         WebElement acceptCookies = driver.findElement(Locators.acceptCookies);
         acceptCookies.click();
