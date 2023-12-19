@@ -12,7 +12,7 @@ public class CustomWaitersEx {
     public static void main(String[] args) {
         WebDriver driver = DriverSetUp.setUpDriver();
         driver.get("https://www.guinnessworldrecords.com/Account/Login");
-        new WaiterClass(driver).waitForVisabilityOfWebElement(By.id("ez-accept-all")).click();
+        new WaiterClass(driver).waitForVisabilityOfWebElementAndReturnElement(By.id("ez-accept-all")).click();
 
 
     }

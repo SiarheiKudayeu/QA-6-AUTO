@@ -5,13 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import utils.ActionsClass;
 
 import static org.testng.Assert.assertFalse;
 
-public class Lesson8Class extends BaseTest {
-
+public class Lesson8Class2 extends BaseTest {
 
     @Test
     public void checkPageTitle() {
@@ -48,6 +49,5 @@ public class Lesson8Class extends BaseTest {
         actionsClass.click(rememberMe);
         Assert.assertFalse(checkBox.isSelected());
     }
-
 
 }

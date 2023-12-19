@@ -2,16 +2,19 @@ package utils;
 
 import driverFactory.DriverSetUp;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class ActionsClass {
     WebDriver driver;
     WaiterClass waiterClass;
+    Actions actions;
 
     public ActionsClass(WebDriver driver) {
         this.driver = driver;
         this.waiterClass = new WaiterClass(driver);
+        this.actions = new Actions(driver);
     }
 
     public void click(By locator){
@@ -19,8 +22,23 @@ public class ActionsClass {
         driver.findElement(locator).click();
     }
 
-    public void senKeys(By locator, String text){
+    public void clickAndOpenInNewWindow(By locator){
         waiterClass.waitForVisabilityOfWebElement(locator);
+        actions.keyDown(Keys.COMMAND).click(driver.findElement(locator)).keyUp(Keys.COMMAND).build().perform();
+    }
+
+    public void sendKeys(By locator, String text){
+        waiterClass.waitForVisabilityOfWebElement(locator);
+        driver.findElement(locator).sendKeys(text);
+    }
+    public void sendKeys(By locator, Keys key){
+        waiterClass.waitForVisabilityOfWebElement(locator);
+        driver.findElement(locator).sendKeys(key);
+    }
+
+    public void clearAndSendKeys(By locator, String text){
+        waiterClass.waitForVisabilityOfWebElement(locator);
+        driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(text);
     }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="AllTests Suite">
     <test name="AllTests">
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="lesson8.Lesson8Class"/>
-            <class name="lesson8.Lesson8Class2"/>
+            <class name="lesson9.parameters.ParametersClass2"/>
         </classes>
     </test>
 </suite>

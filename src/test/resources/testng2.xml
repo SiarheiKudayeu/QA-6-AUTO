@@ -2,8 +2,8 @@
 <suite name="AllTests Suite">
     <test name="AllTests">
         <classes>
-            <class name="lesson8.Lesson8Class"/>
-            <class name="lesson8.Lesson8Class2"/>
+            <class name="lesson9.homework3.before_and_after.Lesson8Class"/>
+            <class name="lesson9.homework3.before_and_after.Lesson8Class2"/>
         </classes>
     </test>
 </suite>
